@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown to Birthday</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Ranger&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <div class="clock" v-if="!isBirthdayPassed">
+            <div id="date">{{ days }} Days</div>
+            <div id="time">{{ hours }}h {{ minutes }}m {{ seconds }}s</div>
+        </div>
+        <div class="container" v-else>
+            <h1>🎉 Happy Birthday, Ashi! 🎉</h1>
+            <p class="message">Wishing you a day filled with love, laughter, and joy. May your birthday be as amazing as you are!</p>
+            <p class="subtle-message">From your Nexa aka Yash</p>
+            <button @click="showHiddenBox">Click for a Special Message!</button>
+        </div>
+        <div class="hidden-box" v-if="showBox">
+            <p class="hidden-message">Surprise! I hope you have a wonderful birthday!</p>
+            <p class="signature">From your Nexa aka Yash</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>

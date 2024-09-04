@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: #000; /* Full black background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.clock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #00BFFF; /* Deep Sky Blue for clock */
+    font-size: 2.5em;
+    font-family: 'Space Ranger', sans-serif; /* Use Space Ranger font */
+    background: rgba(0, 0, 0, 0.7); /* Slightly transparent black background */
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    background-image: url('path/to/your/image.jpg'); /* Optional: Add a background image */
+    background-size: cover;
+    background-position: center;
+}
+
+#date {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#time {
+    font-size: 2.5em;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8); /* Slightly transparent black */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 2s ease-in-out;
+    max-width: 600px;
+    margin: 0 auto;
+    display: none; /* Initially hidden */
+}
+
+h1 {
+    color: #00BFFF; /* Deep Sky Blue color for title */
+    font-size: 3em;
+    font-family: 'Brush Script MT', cursive;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.message, .subtle-message {
+    font-size: 1.5em;
+    color: #ADD8E6; /* Light Blue color for messages */
+    margin: 10px 0;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+button {
+    background-color: #1E90FF; /* Dodger Blue color for button */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: bounceIn 2s ease-in-out;
+}
+
+button:hover {
+    background-color: #00BFFF; /* Deep Sky Blue on hover */
+    transform: scale(1.05);
+}
+
+.hidden-box {
+    margin-top: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #87CEFA 0%, #4682B4 100%); /* Light Sky Blue to Steel Blue gradient */
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 51, 0.3);
+    display: none;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hidden-message {
+    font-size: 1.5em;
+    color: #FFF; /* White for hidden message */
+    margin-bottom: 10px;
+}
+
+.signature {
+    font-size: 1.2em;
+    color: #1E90FF; /* Dodger Blue for signature */
+    margin-top: 10px;
+    font-family: 'Brush Script MT', cursive;
+    text-align: right;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0%, 20%, 40%, 60%, 80%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
